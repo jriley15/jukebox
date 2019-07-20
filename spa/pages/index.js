@@ -1,36 +1,41 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import MuiLink from "@material-ui/core/Link";
-import ProTip from "../src/components/ProTip";
-import Link from "../src/components/Link";
+import { connect } from "react-redux";
+import { startClock, serverRenderClock } from "../store";
+import Examples from "../components/examples";
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Built with love by the "}
-      <MuiLink color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </MuiLink>
-      {" team."}
-    </Typography>
-  );
-}
+const Index = () => {
+  return <div>Test</div>;
+};
 
-export default function Index() {
-  return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js v4-beta example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <MadeWithLove />
-      </Box>
-    </Container>
-  );
+export default Index;
+
+/*
+class Index extends React.Component {
+  static getInitialProps({ reduxStore, req }) {
+    const isServer = !!req;
+    // DISPATCH ACTIONS HERE ONLY WITH `reduxStore.dispatch`
+    reduxStore.dispatch(serverRenderClock(isServer));
+
+    return {};
+  }
+
+  componentDidMount() {
+    // DISPATCH ACTIONS HERE FROM `mapDispatchToProps`
+    // TO TICK THE CLOCK
+    this.timer = setInterval(() => this.props.startClock(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  render() {
+    return <Examples />;
+  }
 }
+const mapDispatchToProps = { startClock };
+export default connect(
+  null,
+  mapDispatchToProps
+)(Index);
+*/
