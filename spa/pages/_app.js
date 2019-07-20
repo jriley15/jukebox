@@ -24,7 +24,7 @@ class MyApp extends App {
       <Container>
         <Provider store={reduxStore}>
           <Head>
-            <title>My page</title>
+            <title>Jukebox</title>
           </Head>
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
