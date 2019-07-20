@@ -48,7 +48,7 @@ const Landing = () => {
         >
           Lorem ipsum
         </Typography>
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" align="center" color="textSecondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
         <Grid container justify="center" spacing={1}>

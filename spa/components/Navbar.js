@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1
+  },
+  navButton: {
+    color: "#ff5370"
   }
 }));
 
@@ -29,9 +32,9 @@ export default function NavBar() {
           <Typography variant="h6" className={classes.title}>
             Logo
           </Typography>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Contact</Button>
-          <Button color="inherit">Sign Up</Button>
+          <Button className={classes.navButton}>About</Button>
+          <Button className={classes.navButton}>Contact</Button>
+          <Button className={classes.navButton}>Sign Up</Button>
         </Toolbar>
       </AppBar>
     </div>
